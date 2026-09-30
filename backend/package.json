@@ -1,0 +1,30 @@
+{
+  "name": "invoicedesk-api",
+  "version": "1.0.0",
+  "description": "Invoice & receipt data extraction API (ReceiptBank-style)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/db/migrate.js",
+    "mock-asmx": "node tools/mock-asmx.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "better-sqlite3": "^11.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "knex": "^3.1.0",
+    "multer": "^2.0.0",
+    "pdf-lib": "^1.17.1",
+    "unpdf": "^1.8.1"
+  },
+  "optionalDependencies": {
+    "@aws-sdk/client-s3": "^3.1138.0",
+    "@aws-sdk/client-textract": "^3.1138.0",
+    "@google-cloud/documentai": "^10.1.0",
+    "mssql": "^11.0.1"
+  }
+}
